@@ -9,11 +9,7 @@ import importer from '../importers/powerball';
 
 const pb = new importer();
 const error = (err) => {
-    console.log(err);
-
-    res.send({
-        error: err
-    });
+    throw err;
 };
 
 router.get('/jackpot', apicache(pbConfig.cache.jackpot), (req, res) => {
