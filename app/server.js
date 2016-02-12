@@ -1,7 +1,10 @@
-let express = require('express');
-let app = express();
+const express = require('express');
+const app = express();
+const compression = require('compression');
 
-let powerball = require('./controllers/powerball');
+const powerball = require('./controllers/powerball');
+
+app.use(compression());
 
 app.use('/pb', powerball);
 
