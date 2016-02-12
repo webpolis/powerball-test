@@ -5,12 +5,7 @@ const pbConfig = require('../config/powerball');
 const numeral = require('numeral');
 
 export default class powerball {
-    constructor() {
-        this.data = {
-            jackpot: null,
-            winners: null
-        };
-    }
+    constructor() {}
 
     fetch() {
         let self = this;
